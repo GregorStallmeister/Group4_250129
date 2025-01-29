@@ -9,19 +9,21 @@ public class ArrayBasics {
             numbers2[i] = i+11;
         }
 
+        System.out.print("Array numbers1: ");
         for(double number : numbers1) {
             System.out.print(number + " ");
         }
         System.out.println();
+        System.out.print("Array numbers2: ");
         for(double number : numbers2) {
             System.out.print(number + " ");
         }
 
 
-
+        System.out.println();
         System.out.println("Largest Number: " + findLargestNumber(numbers1));
         System.out.println("sumOfArry: " + sumOfArray(numbers2));
-        System.out.println("sumOfTwoArrays: ");
+        System.out.print("sumOfTwoArrays: ");
         double[] result = sumOfTwoArrays(numbers1, numbers2);
         if (result != null) {
             for (double element : result) {
