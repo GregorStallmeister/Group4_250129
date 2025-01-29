@@ -37,6 +37,7 @@ public class ArrayBasics {
             }
             return sum;
         }
+        return null;
     }
 
 
