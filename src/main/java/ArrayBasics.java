@@ -22,7 +22,7 @@ public class ArrayBasics {
 
         System.out.println();
         System.out.println("Largest Number: " + findLargestNumber(numbers1));
-        System.out.println("sumOfArry: " + sumOfArray(numbers2));
+        System.out.println("sumOfArray: " + sumOfArray(numbers2));
         System.out.print("sumOfTwoArrays: ");
         double[] result = sumOfTwoArrays(numbers1, numbers2);
         if (result != null) {
@@ -35,7 +35,7 @@ public class ArrayBasics {
 
     // method for calculating the sum of array elements
     public static double sumOfArray(double[] arr) {
-        double sum = 0.0;
+        double sum = 0;
         for(double element: arr) {
             sum += element;
         }
@@ -62,7 +62,7 @@ public class ArrayBasics {
      * @return the largest number
      */
     public static double findLargestNumber (double[] numbers) {
-        double largest = 0;
+        double largest = Double.MIN_VALUE;
 
         for(double number : numbers) {
             if (number > largest) {
