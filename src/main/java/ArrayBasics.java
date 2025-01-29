@@ -1,37 +1,50 @@
 public class ArrayBasics {
     public static void main (String[] args) {
 
-        double[] numbers1 = new double[10];
+        double[] numbers1 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        double[] numbers2 = new double[10];
 
         for (int i = 0; i < 10; i++) {
 
-            numbers1[i] = i+1;
+            numbers2[i] = i+11;
         }
 
         for(double number : numbers1) {
-            System.out.println(number);
+            System.out.print(number + " ");
+        }
+        System.out.println();
+        for(double number : numbers2) {
+            System.out.print(number + " ");
         }
 
-        double[] numbers = {1, 2, 3, 4, 10, 6, 7, 8, 9, 5};
 
-        System.out.println(findLargestNumber(numbers));
+
+        System.out.println("Largest Number: " + findLargestNumber(numbers1));
+        System.out.println("sumOfArry: " + sumOfArray(numbers2));
+        System.out.println("sumOfTwoArrays: ");
+        double[] result = sumOfTwoArrays(numbers1, numbers2);
+        if (result != null) {
+            for (double element : result) {
+                System.out.print(element + " ");
+            }
+        }
     }
 
 
     // method for calculating the sum of array elements
-    public static Double sumOfArray(Double[] arr) {
-        Double sum = 0.0;
-        for(Double element: arr) {
+    public static double sumOfArray(double[] arr) {
+        double sum = 0.0;
+        for(double element: arr) {
             sum += element;
         }
         return sum;
     }
 
     // method for addition 2 arrays elementwise
-    public static Double[] sumOfTwoArray(Double[] arrA, Double[] arrB) {
+    public static double[] sumOfTwoArrays(double[] arrA, double[] arrB) {
         if (arrA.length == arrB.length) {
 
-            Double[] sum = new Double[arrA.length];
+            double[] sum = new double[arrA.length];
             for (int i = 0; i < arrA.length; i++) {
                 sum[i] = arrA[i] +  arrB[i];
             }
