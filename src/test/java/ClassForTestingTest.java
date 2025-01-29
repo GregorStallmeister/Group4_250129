@@ -21,7 +21,7 @@ class ClassForTestingTest {
         int number = 42;
         boolean expected = true;
         // when
-        boolean actual = ClassForTesting.isNumberEven(42);
+        boolean actual = ClassForTesting.isNumberEven(number);
         // then
         assertEquals(expected, actual);
     }
@@ -32,7 +32,7 @@ class ClassForTestingTest {
         int number = 43;
         boolean expected = false;
         // when
-        boolean actual = ClassForTesting.isNumberEven(43);
+        boolean actual = ClassForTesting.isNumberEven(number);
         // then
         assertEquals(expected, actual);
     }
@@ -66,7 +66,7 @@ class ClassForTestingTest {
         int number = 42;
         boolean expected = true;
         // when
-        boolean actual = ClassForTesting.isNumberPositive((42));
+        boolean actual = ClassForTesting.isNumberPositive((number));
         // then
         assertEquals(expected, actual);
     }
@@ -77,7 +77,7 @@ class ClassForTestingTest {
         int number = -42;
         boolean expected = false;
         // when
-        boolean actual = ClassForTesting.isNumberPositive((-42));
+        boolean actual = ClassForTesting.isNumberPositive((number));
         // then
         assertEquals(expected, actual);
     }
