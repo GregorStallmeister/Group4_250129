@@ -20,6 +20,6 @@ public class ClassForTesting {
     }
 
     public static boolean isNumberPositive (int number) {
-        return number >= 0 ? true : false;
+        return number >= 0;
     }
 }
